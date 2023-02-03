@@ -12,3 +12,20 @@ h1 {
   height: 7vh;
   width: 7vh;
 }
+
+.header-bar {
+  display: flex;
+}
+
+.title-logo {
+  width: 50vw;
+  color: snow;
+  display: flex;
+}
+
+.search-bar {
+  display: flex;
+  height: 20vh;
+  width: 50vw;
+}
+
