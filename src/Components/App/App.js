@@ -9,13 +9,21 @@ class App extends Component {
     super();
     this.state = {
       allMovies: [],
+      singleMovie: {},
       error: "",
     };
   }
 
   componentDidMount = () => {
     fetchAllData()
-      .then((data) => this.setState({ allMovies: data[0].movies }))
+      .then((data) =>
+        this.setState(() => {
+          return {
+            allMovies: data[0].movies,
+            singleMovie: data[1].movies,
+          };
+        })
+      )
       .catch((error) => console.log("error", error));
     console.log("hello");
   };
