@@ -13,7 +13,7 @@ class MovieDetails extends Component {
 
   componentDidMount = () => {
     fetchAllData()
-      .then((data) => this.setState({ movie: data[1] }))
+      .then((data) => console.log(data[1]))
       .catch((error) => console.log("error", error));
     console.log("goodBye");
   };
@@ -21,8 +21,8 @@ class MovieDetails extends Component {
   render() {
     return (
       <section className="one-movie">
-        <h1>{movie.title}</h1>
-        <p>{movie.overview}</p>
+        <h1>{this.state.movie.title}</h1>
+        <p>{this.state.movie.overview}</p>
       </section>
     );
   }
