@@ -1,4 +1,28 @@
 img {
-  width: 8vw; 
-  height: 20vh;
+  width: 13vw; 
+  height: 25vh;
+}
+
+h2 {
+  color: snow;
+}
+
+.movie-poster-container {
+  display: flex;
+  flex-direction: column;
+  width: 18vw;
+  height: 34vh;
+}
+
+.movie-title {
+  color: azure;
+  display: flex;
+  flex-direction: row;
+  width: 12vw;
+  height: 5vh;
+}
+
+.star-image {
+  height: 1vh; 
+  width: 1vw;
 }
