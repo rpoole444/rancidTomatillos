@@ -7,7 +7,7 @@ const Library = ({ allMovies }) => {
   const filteredMovies = allMovies.map((movie) => {
     return (
       <Movies
-        id={Date.now()}
+        id={movie.id}
         key={movie.id}
         poster_path={movie.poster_path}
         backdrop_path={movie.backdrop_path}
