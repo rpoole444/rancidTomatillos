@@ -20,13 +20,13 @@ class MovieDetails extends Component {
     return (
       <div>
         <section className="one-movie">
-          <img
+          <img className="movie-background"
             src={this.state.singleMovie.backdrop_path}
             alt={`${this.state.singleMovie.title} - movie backdrop`}
           />
         </section>
         <section className="movie-trailer">
-          <img
+          <img className="single-movie-poster"
             src={this.state.singleMovie.poster_path}
             alt={`${this.state.singleMovie.title} - movie trailer`}
           />
