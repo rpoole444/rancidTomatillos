@@ -1,31 +1,32 @@
 import { Component } from "react";
-import { fetchAllData } from "../Api";
+import { fetchSingleMovie } from "../Api";
 import "./MovieDetails.css";
-
 class MovieDetails extends Component {
   constructor() {
     super();
     this.state = {
-      movie: {},
+      singleMovie: {},
       error: "",
     };
   }
-
   componentDidMount = () => {
-    fetchAllData()
-      .then((data) => console.log(data[1]))
+    fetchSingleMovie(`movies/${this.props.movieID}`)
+      .then((data) => console.log(data))
       .catch((error) => console.log("error", error));
     console.log("goodBye");
   };
-
   render() {
+    console.log(this.state.singleMovie);
     return (
       <section className="one-movie">
-        <h1>{this.state.movie.title}</h1>
-        <p>{this.state.movie.overview}</p>
+        <img
+          src={this.state.singleMovie.backdrop_path}
+          alt={this.state.singleMovie.title}
+        />
+        <h1>{this.state.singleMovie.title}</h1>
+        <p>{this.state.singleMovie.overview}</p>
       </section>
     );
   }
 }
-
 export default MovieDetails;
