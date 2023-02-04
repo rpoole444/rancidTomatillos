@@ -9,9 +9,23 @@
 }
 
 .single-movie-poster {
+  display: flex;
   height: 53vh;
   width: 33vw;
 }
 
 .movie-details {
+  display: flex;
+  width: 50vw;
+  height: 80vh;
+}
+
+.movie-title {
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+}
+
+.one-movie {
+  display: flex;
 }
