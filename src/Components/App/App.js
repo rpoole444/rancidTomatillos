@@ -1,41 +1,42 @@
 import { Component } from "react";
-import { fetchAllData } from "../Api";
+import { fetchAllMovies } from "../Api";
 import Header from "../Header/Header";
 import Library from "../Library/Library";
+import { Route } from "react-router-dom";
+import MovieDetails from "../MovieDetails/MovieDetails";
 import "./App.css";
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
       allMovies: [],
-      singleMovie: {},
       error: "",
     };
   }
-
   componentDidMount = () => {
-    fetchAllData()
-      .then((data) =>
-        this.setState(() => {
-          return {
-            allMovies: data[0].movies,
-            singleMovie: data[1].movies,
-          };
-        })
-      )
+    fetchAllMovies()
+      .then((data) => this.setState({ allMovies: data.movies }))
       .catch((error) => console.log("error", error));
     console.log("hello");
   };
-
   render() {
     return (
       <main className="App">
         <Header />
-        <Library allMovies={this.state.allMovies} />
+        <Route
+          exact
+          path="/"
+          render={() => <Library allMovies={this.state.allMovies} />}
+        ></Route>
+        <Route
+          exact
+          path="/:movieId"
+          render={({ match }) => {
+            return <MovieDetails movieID={match.params.movieId} />;
+          }}
+        ></Route>
       </main>
     );
   }
 }
-
 export default App;
