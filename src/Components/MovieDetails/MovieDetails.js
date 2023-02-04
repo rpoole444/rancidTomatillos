@@ -18,21 +18,24 @@ class MovieDetails extends Component {
   render() {
     console.log(this.state.singleMovie);
     return (
-      <div>
-        <section className="one-movie">
-          <img className="movie-background"
-            src={this.state.singleMovie.backdrop_path}
-            alt={`${this.state.singleMovie.title} - movie backdrop`}
-          />
-        </section>
+      <section
+        className="one-movie"
+        style={{
+          backgroundImage: `url(${this.state.singleMovie.backdrop_path})`,
+          backgroundSize: "cover",
+        }}
+      >
         <section className="movie-trailer">
-          <img className="single-movie-poster"
+          <section className="movie-title">
+            <h1>{this.state.singleMovie.title}</h1>
+          </section>
+          <img
+            className="single-movie-poster"
             src={this.state.singleMovie.poster_path}
             alt={`${this.state.singleMovie.title} - movie trailer`}
           />
         </section>
         <section className="movie-details">
-          <h1>{this.state.singleMovie.title}</h1>
           <p>{this.state.singleMovie.tagline}</p>
           <p>{this.state.singleMovie.overview}</p>
           <p>{`Release Date: ${this.state.singleMovie.release_date}`}</p>
@@ -41,7 +44,7 @@ class MovieDetails extends Component {
           <p>{`Film Runtime: ${this.state.singleMovie.runtime} minutes`}</p>
           <p>{this.state.singleMovie.genres}</p>
         </section>
-      </div>
+      </section>
     );
   }
 }
