@@ -1,7 +1,7 @@
-img {
-    width: 14vw;
-    height: 27vh;
-    border-radius: 9px;
+.poster-image {
+  width: 14vw;
+  height: 27vh;
+  border-radius: 9px;
 }
 
 h2 {
@@ -24,6 +24,6 @@ h2 {
 }
 
 .star-image {
-  height: 1vh; 
+  height: 1vh;
   width: 1vw;
 }
