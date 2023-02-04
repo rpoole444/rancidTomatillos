@@ -1,6 +1,7 @@
 img {
-  width: 13vw; 
-  height: 25vh;
+    width: 14vw;
+    height: 27vh;
+    border-radius: 9px;
 }
 
 h2 {
