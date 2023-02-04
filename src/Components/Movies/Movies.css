@@ -1,11 +1,15 @@
-img {
-    width: 14vw;
-    height: 27vh;
-    border-radius: 9px;
+.poster-image {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 14px 2px rgba(253, 252, 252, 0.25); 
+  width: 11vw;
+  height: 27vh;
+  border-radius: 9px;
 }
 
 h2 {
   color: snow;
+  font-size: 15px;
+  padding-top: 10px;
 }
 
 .movie-poster-container {
@@ -18,12 +22,14 @@ h2 {
 .movie-title {
   color: azure;
   display: flex;
-  flex-direction: row;
   width: 12vw;
   height: 5vh;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .star-image {
   height: 1vh; 
-  width: 1vw;
+  width: .5vw;
+  padding-top: 10px;
 }
