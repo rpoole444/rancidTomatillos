@@ -1,13 +1,16 @@
-.one-movie {
+.movie-background {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   width: 100vw;
   color: snow;
+  opacity: 35%;
 }
 
-.movie-trailer {
+.single-movie-poster {
+  height: 53vh;
+  width: 33vw;
 }
 
 .movie-details {
