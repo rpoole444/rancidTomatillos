@@ -1,12 +1,3 @@
-/* .movie-background {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  color: snow;
-  opacity: 35%;
-} */
 .movie-overview {
   text-align: left;
   display: inline-block
@@ -27,13 +18,6 @@
   width: 69vw;
   justify-content: center;
 }
-/* 
-.single-movie-poster {
-  display: flex;
-  height: 53vh;
-  width:20vw;
-  padding-left: 10px;
-} */
 
 .movie-details {
   color: snow;
@@ -48,6 +32,12 @@
 
 .middle-container {
   display: flex;
+}
+
+.home-button {
+  border-radius: 5px;
+  background-color: rgb(141, 156, 133);
+  margin-left: 35px;
 }
 
 
