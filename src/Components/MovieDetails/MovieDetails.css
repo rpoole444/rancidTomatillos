@@ -12,16 +12,18 @@
   display: inline-block
 }
 
-.movie-title {
+.movie-title-container {
   display: flex;
   width: 100vw;
   height: 20vh;
   padding-bottom: 20px;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .movie-trailer {
   display: flex;
-  height: 66vh;
+  height: 90vh;
   width: 69vw;
   justify-content: center;
 }
@@ -41,7 +43,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding-right: 75px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .middle-container {
