@@ -1,4 +1,4 @@
-.movie-background {
+/* .movie-background {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,26 +6,46 @@
   width: 100vw;
   color: snow;
   opacity: 35%;
-}
-
-.single-movie-poster {
-  display: flex;
-  height: 53vh;
-  width: 33vw;
-}
-
-.movie-details {
-  display: flex;
-  width: 50vw;
-  height: 80vh;
+} */
+.movie-overview {
+  text-align: left;
+  display: inline-block
 }
 
 .movie-title {
   display: flex;
   width: 100vw;
   height: 20vh;
+  padding-bottom: 20px;
 }
 
-.one-movie {
+.movie-trailer {
+  display: flex;
+  height: 66vh;
+  width: 69vw;
+  justify-content: center;
+}
+/* 
+.single-movie-poster {
+  display: flex;
+  height: 53vh;
+  width:20vw;
+  padding-left: 10px;
+} */
+
+.movie-details {
+  color: snow;
+  display: flex;
+  width: 55vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 75px;
+  font-size: 20px;
+}
+
+.middle-container {
   display: flex;
 }
+
+
