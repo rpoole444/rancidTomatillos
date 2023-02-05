@@ -1,3 +1,7 @@
+p {
+  margin: 8px;
+}
+
 .movie-overview {
   text-align: left;
   display: inline-block
