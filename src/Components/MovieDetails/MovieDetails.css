@@ -1,31 +1,47 @@
-.movie-background {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  color: snow;
-  opacity: 35%;
+p {
+  margin: 8px;
 }
 
-.single-movie-poster {
-  display: flex;
-  height: 53vh;
-  width: 33vw;
+.movie-overview {
+  text-align: left;
+  display: inline-block
 }
 
-.movie-details {
-  display: flex;
-  width: 50vw;
-  height: 80vh;
-}
-
-.movie-title {
+.movie-title-container {
   display: flex;
   width: 100vw;
   height: 20vh;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.one-movie {
+.movie-trailer {
+  display: flex;
+  height: 90vh;
+  width: 69vw;
+  justify-content: center;
+}
+
+.movie-details {
+  color: snow;
+  display: flex;
+  width: 55vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 75px;
+  font-size: 25px;
+}
+
+.middle-container {
   display: flex;
 }
+
+.home-button {
+  border-radius: 5px;
+  background-color: rgb(141, 156, 133);
+  margin-left: 35px;
+}
+
+
