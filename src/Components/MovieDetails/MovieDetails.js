@@ -25,7 +25,7 @@ class MovieDetails extends Component {
               <button className='home-button'>Back To Home</button>
             </section>
           </NavLink>
-         <section className="movie-title">
+         <section className="movie-title-container">
             <h1>{this.state.singleMovie.title}</h1>
           </section>
         <section className="middle-container">
