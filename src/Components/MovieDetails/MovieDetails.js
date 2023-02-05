@@ -39,7 +39,7 @@ class MovieDetails extends Component {
           <p>{this.state.singleMovie.tagline}</p>
           <p className="movie-overview">{this.state.singleMovie.overview}</p>
           <p>{`Release Date: ${this.state.singleMovie.release_date}`}</p>
-          <p>{`Film Budget: $${this.state.singleMovie.budget}`}</p>
+          <p>{`Film Budget: $${this.state.singleMovie.budget} million`}</p>
           <p>{`Film Revenue: $${this.state.singleMovie.revenue}`}</p>
           <p>{`Film Runtime: ${this.state.singleMovie.runtime} minutes`}</p>
           <p>{this.state.singleMovie.genres}</p>
