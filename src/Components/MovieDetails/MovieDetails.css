@@ -4,7 +4,7 @@ p {
 
 .movie-overview {
   text-align: left;
-  display: inline-block
+  display: inline-block;
 }
 
 .movie-title-container {
@@ -24,7 +24,6 @@ p {
 }
 
 .movie-details {
-  color: snow;
   display: flex;
   width: 55vw;
   height: 100vh;
@@ -32,6 +31,13 @@ p {
   align-items: flex-start;
   padding-right: 75px;
   font-size: 25px;
+}
+
+.details-container {
+  color: white;
+  height: auto;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .middle-container {
@@ -44,4 +50,27 @@ p {
   margin-left: 35px;
 }
 
+.background-image {
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
 
+.one-movie {
+  position: relative;
+}
+
+.one-move:before {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
+}
