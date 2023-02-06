@@ -7,17 +7,35 @@ class MovieDetails extends Component {
     super();
     this.state = {
       singleMovie: {},
+      trailer: [],
       error: "",
     };
   }
+
   componentDidMount = () => {
-    fetchSingleMovie(`movies/${this.props.movieID}`)
-      .then((data) => this.setState({ singleMovie: data.movie }))
-      .catch((error) => console.log("error", error));
+    const promise = Promise.all([
+      fetch(
+        `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.movieID}`
+      ).then((res) => res.json()),
+      fetch(
+        `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.movieID}/videos`
+      ).then((res) => res.json()),
+    ]).then(([res1, res2]) => {
+      this.setState({ singleMovie: res1.movie, trailer: res2.videos });
+    });
+    return promise;
+
     console.log("goodBye");
   };
+
+  findMovieTrailer = () => {
+    return this.state.trailer.filter((trailer) => trailer.type === "Trailer")
+      .key;
+  };
+
   render() {
-    console.log(this.state.singleMovie);
+    console.log("singleMovie: ", this.state.singleMovie);
+    console.log("Trailer: ", this.findMovieTrailer());
     return (
       <section
         className="one-movie"
@@ -35,11 +53,17 @@ class MovieDetails extends Component {
         </section>
         <section className="middle-container">
           <section className="movie-trailer">
-            <img
-              className="single-movie-poster"
-              src={this.state.singleMovie.poster_path}
-              alt={`${this.state.singleMovie.title} - movie trailer`}
-            />
+            <iframe
+              src={`https://www.youtube.com/watch?v=${this.findMovieTrailer()}`}
+            >
+              {/* <source
+                src={`https://www.youtube.com/watch?v=${this.findMovieTrailer()}`}
+                type="video/mp4"
+              ></source>
+              <source src={this.findMovieTrailer()} type="video/webm"></source>
+              <source src={this.findMovieTrailer()} type="video/ogg"></source>
+              This browser does not support HTML video */}
+            </iframe>
           </section>
           <section className="movie-details">
             <section className="details-container">
