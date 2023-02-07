@@ -4,5 +4,4 @@ const fetchAllMovies = () => {
   );
 };
 
-
 export { fetchAllMovies };
