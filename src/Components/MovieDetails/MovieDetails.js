@@ -27,13 +27,16 @@ class MovieDetails extends Component {
     return promise;
   };
 
-  findMovieTrailer = () => {
-    return this.state.trailer.find((trailer) => trailer.type === "Trailer");
-  };
+  grabMovieTrailer = () => { 
+   const trailer = this.state.trailer.find(trailer => trailer.type === "Trailer")
+   if (!trailer && this.state.trailer.length > 0) {
+    return this.state.trailer[0].key
+   } else if (trailer && this.state.trailer.length > 0){
+    return trailer.key
+   }
+  } 
 
   render() {
-    console.log("singleMovie: ", this.state.singleMovie);
-    console.log("Trailer: ", this.findMovieTrailer());
     return (
       <section
         className="one-movie"
@@ -51,17 +54,15 @@ class MovieDetails extends Component {
         </section>
         <section className="middle-container">
           <section className="movie-trailer">
-            <iframe
-              src={`https://www.youtube.com/embed/${this.findMovieTrailer()}`}
+          <iframe
+              src={`https://www.youtube.com/embed/${this.grabMovieTrailer()}`}
+              allow='autoplay; encrypted-media'
+              allowFullScreen
+              title='video'
+              width={760}
+              height={444}
             >
-              {/* <source
-                src={`https://www.youtube.com/watch?v=${this.findMovieTrailer()}`}
-                type="video/mp4"
-              ></source>
-              <source src={this.findMovieTrailer()} type="video/webm"></source>
-              <source src={this.findMovieTrailer()} type="video/ogg"></source>
-              This browser does not support HTML video */}
-            </iframe>
+          </iframe>
           </section>
           <section className="movie-details">
             <section className="details-container">
@@ -70,10 +71,9 @@ class MovieDetails extends Component {
                 {this.state.singleMovie.overview}
               </p>
               <p>{`Release Date: ${this.state.singleMovie.release_date}`}</p>
-              <p>{`Film Budget: $${this.state.singleMovie.budget}`}</p>
-              <p>{`Film Revenue: $${this.state.singleMovie.revenue}`}</p>
-              <p>{`Film Runtime: ${this.state.singleMovie.runtime} minutes`}</p>
-              <p>{this.state.singleMovie.genres}</p>
+              <p>{`Film Budget: $${Number(this.state.singleMovie.budget).toLocaleString()}`}</p>
+              <p>{`Film Revenue: $${Number(this.state.singleMovie.revenue).toLocaleString()}`}</p>
+              <p>{`Film Runtime: ${this.state.singleMovie.runtime} `}</p>
             </section>
           </section>
         </section>
