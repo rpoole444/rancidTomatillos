@@ -22,11 +22,17 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <Header />
         <Route
           exact
           path="/"
-          render={() => <Library allMovies={this.state.allMovies} />}
+          render={() => {
+            return (
+              <div>
+                <Header />
+                <Library allMovies={this.state.allMovies} />
+              </div>
+            );
+          }}
         ></Route>
         <Route
           exact
