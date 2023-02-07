@@ -23,9 +23,8 @@ class MovieDetails extends Component {
     ]).then(([res1, res2]) => {
       this.setState({ singleMovie: res1.movie, trailer: res2.videos });
     });
-    return promise;
-
     console.log("goodBye");
+    return promise;
   };
 
   findMovieTrailer = () => {
