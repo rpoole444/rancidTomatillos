@@ -12,10 +12,11 @@ describe("User should see a Movie Image, Title, and Rating for each movie in the
   });
 
   it("User should see the Movie titles and ratings", () => {
-    cy.get(".movie-title").should("be.visible");
+    cy.get(".movie-title").should('contains',"be.visible");
   });
 
   it("User should see a star image", () => {
-    cy.get(".star-image").should("be.visible");
-  });
+    cy.get(".star-image").should( "be.visible");
+    
+    });
 });
