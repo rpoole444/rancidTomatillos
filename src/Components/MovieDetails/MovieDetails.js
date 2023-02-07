@@ -29,8 +29,7 @@ class MovieDetails extends Component {
   };
 
   findMovieTrailer = () => {
-    return this.state.trailer.filter((trailer) => trailer.type === "Trailer")
-      .key;
+    return this.state.trailer.find((trailer) => trailer.type === "Trailer");
   };
 
   render() {
@@ -54,7 +53,7 @@ class MovieDetails extends Component {
         <section className="middle-container">
           <section className="movie-trailer">
             <iframe
-              src={`https://www.youtube.com/watch?v=${this.findMovieTrailer()}`}
+              src={`https://www.youtube.com/embed/${this.findMovieTrailer()}`}
             >
               {/* <source
                 src={`https://www.youtube.com/watch?v=${this.findMovieTrailer()}`}
@@ -72,7 +71,7 @@ class MovieDetails extends Component {
                 {this.state.singleMovie.overview}
               </p>
               <p>{`Release Date: ${this.state.singleMovie.release_date}`}</p>
-              <p>{`Film Budget: $${this.state.singleMovie.budget} million`}</p>
+              <p>{`Film Budget: $${this.state.singleMovie.budget}`}</p>
               <p>{`Film Revenue: $${this.state.singleMovie.revenue}`}</p>
               <p>{`Film Runtime: ${this.state.singleMovie.runtime} minutes`}</p>
               <p>{this.state.singleMovie.genres}</p>
