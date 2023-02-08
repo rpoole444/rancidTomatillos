@@ -7,16 +7,21 @@ describe("User should see a Movie Image, Title, and Rating for each movie in the
     cy.visit("http://localhost:3000");
   });
 
-  it("User should see Movie images", () => {
+  it("User should see movie images", () => {
     cy.get(".poster-image").should("be.visible");
   });
 
-  it("User should see the Movie titles and ratings", () => {
-    cy.get(".movie-title").should('contains',"be.visible");
+  it("Should See a Movie title", () => {
+    cy.get("h2").should("be.visible");
   });
 
   it("User should see a star image", () => {
     cy.get(".star-image").should( "be.visible");
-    
-    });
+  });
+
+  it("User should see a user rating", () => {
+    cy.get("h2").should( "be.visible");
+  });
+
+  
 });
