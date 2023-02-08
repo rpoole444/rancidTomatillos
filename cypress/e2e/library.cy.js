@@ -7,7 +7,11 @@ describe("A user should see the list of Movies", () => {
     cy.visit("http://localhost:3000");
   });
 
-  it("Should display a Title", () => {
+  it("Should display a title", () => {
     cy.get(".movie-container").should("be.visible");
+  });
+
+  it("Should display all movies", () => {
+    cy.get(".movie-container").find(".poster-image").should("have.length", "40");
   });
 });
