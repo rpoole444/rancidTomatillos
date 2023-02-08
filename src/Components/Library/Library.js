@@ -3,7 +3,6 @@ import Movies from "../Movies/Movies";
 import "./Library.css";
 
 const Library = ({ allMovies }) => {
-  console.log(allMovies);
   const filteredMovies = allMovies.map((movie) => {
     return (
       <Movies
