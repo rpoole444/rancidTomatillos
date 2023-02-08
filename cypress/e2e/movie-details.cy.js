@@ -36,28 +36,28 @@ describe("User should see a Movie Title, Trailer, Movie Details, and Back Button
     .should('be.visible')
   });
 
-  it("Should See a Movie Tagline", () => {
+  it("Should see a movie tagline", () => {
     cy.get("p").should("contain", "Her reign begins.");
 
   });
 
-  it("Should See a Movie Overview", () => {
+  it("Should see a movie overview", () => {
     cy.get("p").should("contain", "The story of the Agojie, the all-female unit of warriors who protected the African Kingdom of Dahomey in the 1800s with skills and a fierceness unlike anything the world has ever seen, and General Nanisca as she trains the next generation of recruits and readies them for battle against an enemy determined to destroy their way of life.");
   });
   
-  it("Should See a Release Date", () => {
+  it("Should see a release date", () => {
     cy.get("p").should("contain", "2022-09-15");
   });
 
-  it("Should See a Film Budget", () => {
-    cy.get("p").should("contain", "50000000");
+  it("Should see a film budget", () => {
+    cy.get("p").should("contain", "50,000,000");
   });
 
-  it("Should See a Film Revenue", () => {
-    cy.get("p").should("contain", "91000000");
+  it("Should see a film revenue", () => {
+    cy.get("p").should("contain", "91,000,000");
   });
 
-  it("Should See a Film Runtime", () => {
+  it("Should see a film runtime", () => {
     cy.get("p").should("contain", "135");
   });
 });
