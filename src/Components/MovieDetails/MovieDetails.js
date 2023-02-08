@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { fetchSingleMovie } from "../Api";
 import { NavLink } from "react-router-dom";
 import "./MovieDetails.css";
 class MovieDetails extends Component {
@@ -9,11 +8,13 @@ class MovieDetails extends Component {
       singleMovie: {},
       trailer: [],
       error: "",
+      loading: false,
     };
   }
 
   componentDidMount = () => {
-    const promise = Promise.all([
+    this.setState({loading: true})
+    Promise.all([
       fetch(
         `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.movieID}`
       ).then((res) => res.json()),
@@ -21,10 +22,8 @@ class MovieDetails extends Component {
         `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.movieID}/videos`
       ).then((res) => res.json()),
     ]).then(([res1, res2]) => {
-      this.setState({ singleMovie: res1.movie, trailer: res2.videos });
+      this.setState({ singleMovie: res1.movie, trailer: res2.videos, loading: false }).catch((error) => this.setState({error: true}));
     });
-    console.log("goodBye");
-    return promise;
   };
 
   grabMovieTrailer = () => { 
@@ -73,7 +72,7 @@ class MovieDetails extends Component {
               <p>{`Release Date: ${this.state.singleMovie.release_date}`}</p>
               <p>{`Film Budget: $${Number(this.state.singleMovie.budget).toLocaleString()}`}</p>
               <p>{`Film Revenue: $${Number(this.state.singleMovie.revenue).toLocaleString()}`}</p>
-              <p>{`Film Runtime: ${this.state.singleMovie.runtime} `}</p>
+              <p>{`Film Runtime: ${this.state.singleMovie.runtime} Minutes`}</p>
             </section>
           </section>
         </section>
