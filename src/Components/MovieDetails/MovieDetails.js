@@ -75,9 +75,9 @@ class MovieDetails extends Component {
               <button className="home-button">Back To Home</button>
             </section>
           </NavLink>
-          <section className="movie-title-container">
+          {/* <section className="movie-title-container">
             <h1>{title}</h1>
-          </section>
+          </section> */}
           <section className="middle-container">
             <section className="movie-trailer">
               {trailerURL ? (
@@ -86,17 +86,16 @@ class MovieDetails extends Component {
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="video"
-                  width={760}
-                  height={444}
+                  width={1600}
+                  height={800}
                 ></iframe>
               ) : (
                 <div>No trailer available</div>
               )}
             </section>
+            </section>
             <section className="movie-details">
               <section className="details-container">
-                <p>{tagline}</p>
-                <p className="movie-overview">{overview}</p>
                 <p>{`Release Date: ${release_date}`}</p>
                 <p>{`Film Budget: $${Number(
                   this.state.singleMovie.budget
@@ -106,9 +105,12 @@ class MovieDetails extends Component {
                 ).toLocaleString()}`}</p>
                 <p>{`Film Runtime: ${runtime} Minutes`}</p>
               </section>
+                <section className="movie-overview">
+                <p>{tagline}</p>
+                <p>{overview}</p>  
+                </section>
             </section>
           </section>
-        </section>
       );
     }
   }
