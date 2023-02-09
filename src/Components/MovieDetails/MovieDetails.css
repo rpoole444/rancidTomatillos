@@ -64,7 +64,7 @@ p {
   position: relative;
 }
 
-.one-move:before {
+/* .one-movie:before {
   content: "";
   background-size: cover;
   position: absolute;
@@ -73,4 +73,4 @@ p {
   bottom: 0px;
   left: 0px;
   opacity: 0.1;
-}
+} */
