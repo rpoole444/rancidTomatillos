@@ -7,7 +7,6 @@ class MovieDetails extends Component {
     this.state = {
       singleMovie: {},
       trailer: [],
-      error: "",
       loading: false,
     };
   }
@@ -45,6 +44,7 @@ class MovieDetails extends Component {
   };
 
   grabMovieTrailer = () => {
+    console.log(this.state.trailer);
     const trailer = this.state.trailer.find(
       (trailer) => trailer.type === "Trailer"
     );
@@ -60,15 +60,14 @@ class MovieDetails extends Component {
     if (!this.state.singleMovie.title) {
       return <h1>No Video Found</h1>; //make a back button, work on error handeling, spinners for loading (grab package)
     } else {
-      //filter the titles for search bar, two copies of the all movies one will be immutable and the other filtered.
-      //look out for 2 sets of data search on immutable data, show filtered results(reactable data set),
-      //includes is case sensitive make sure that bothe copies are the same case! Throw in toUppercase or Lowercase
-      // use trim (no white space errors)
+      const { title, tagline, overview, release_date, runtime } =
+        this.state.singleMovie;
+      const trailerURL = this.grabMovieTrailer();
       return (
         <section
           className="one-movie"
           style={{
-            backgroundImage: `url(${this.state.singleMovie.backdrop_path})`,
+            backgroundImage: `linear-gradient(to bottom, #0000, #777), url(${this.state.singleMovie.backdrop_path})`,
           }}
         >
           <NavLink to="/">
@@ -77,33 +76,35 @@ class MovieDetails extends Component {
             </section>
           </NavLink>
           <section className="movie-title-container">
-            <h1>{this.state.singleMovie.title}</h1>
+            <h1>{title}</h1>
           </section>
           <section className="middle-container">
             <section className="movie-trailer">
-              <iframe
-                src={`https://www.youtube.com/embed/${this.grabMovieTrailer()}`}
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                title="video"
-                width={760}
-                height={444}
-              ></iframe>
+              {trailerURL ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${trailerURL}`}
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  title="video"
+                  width={760}
+                  height={444}
+                ></iframe>
+              ) : (
+                <div>No trailer available</div>
+              )}
             </section>
             <section className="movie-details">
               <section className="details-container">
-                <p>{this.state.singleMovie.tagline}</p>
-                <p className="movie-overview">
-                  {this.state.singleMovie.overview}
-                </p>
-                <p>{`Release Date: ${this.state.singleMovie.release_date}`}</p>
+                <p>{tagline}</p>
+                <p className="movie-overview">{overview}</p>
+                <p>{`Release Date: ${release_date}`}</p>
                 <p>{`Film Budget: $${Number(
                   this.state.singleMovie.budget
                 ).toLocaleString()}`}</p>
                 <p>{`Film Revenue: $${Number(
                   this.state.singleMovie.revenue
                 ).toLocaleString()}`}</p>
-                <p>{`Film Runtime: ${this.state.singleMovie.runtime} Minutes`}</p>
+                <p>{`Film Runtime: ${runtime} Minutes`}</p>
               </section>
             </section>
           </section>
