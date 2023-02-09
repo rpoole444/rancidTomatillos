@@ -22,6 +22,7 @@ class App extends Component {
       .then((data) =>
         this.setState({
           allMovies: data.movies,
+          filteredMovies: data.movies,
           loading: false,
         })
       )
