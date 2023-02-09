@@ -3,7 +3,7 @@ import { fetchAllMovies } from "../Api";
 import Header from "../Header/Header";
 import Library from "../Library/Library";
 import ErrorPage from "../ErrorPage/ErrorPage";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import "./App.css";
 class App extends Component {
@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       allMovies: [],
+      filteredMovies: [],
       loading: false,
     };
   }
@@ -18,7 +19,12 @@ class App extends Component {
   componentDidMount = () => {
     this.setState({ loading: true });
     fetchAllMovies()
-      .then((data) => this.setState({ allMovies: data.movies, loading: false }))
+      .then((data) =>
+        this.setState({
+          allMovies: data.movies,
+          loading: false,
+        })
+      )
       .catch((error) => console.log(error, "Error setting library"));
   };
 
@@ -33,7 +39,7 @@ class App extends Component {
               return (
                 <div>
                   <Header />
-                  <Library allMovies={this.state.allMovies} />
+                  <Library allMovies={this.state.filteredMovies} />
                 </div>
               );
             }}
