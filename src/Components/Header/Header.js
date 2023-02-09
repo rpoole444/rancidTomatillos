@@ -11,7 +11,7 @@ const Header = (props) => {
   return (
     <header className="header-bar">
       <section className="title-logo">
-        <h1>Tinseltown Tribune</h1>
+        <h1>TINSELTOWN TRIBUNE</h1>
         <img className="logo-image" src="filmLogo.png" alt="tomatillo" />
       </section>
       <input onChange={onSearch} placeholder="Search" name="search" />
