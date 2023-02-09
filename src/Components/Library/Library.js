@@ -3,7 +3,7 @@ import Movies from "../Movies/Movies";
 import "./Library.css";
 
 const Library = ({ allMovies }) => {
-  const filteredMovies = allMovies.map((movie) => {
+  const mappedMovies = allMovies.map((movie) => {
     return (
       <Movies
         id={movie.id}
@@ -14,7 +14,8 @@ const Library = ({ allMovies }) => {
       />
     );
   });
-  return <div className="movie-container">{filteredMovies}</div>;
+
+  return <div className="movie-container">{mappedMovies}</div>;
 };
 
 export default Library;
