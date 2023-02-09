@@ -1,7 +1,9 @@
 import React from "react";
 import "../Header/Header.css";
 
-const Header = () => {
+const Header = (props) => {
+  const { onUpdateSearch } = props;
+
   return (
     <header className="header-bar">
       <section className="title-logo">
