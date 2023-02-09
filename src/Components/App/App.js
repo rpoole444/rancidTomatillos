@@ -29,6 +29,18 @@ class App extends Component {
       .catch((error) => console.log(error, "Error setting library"));
   };
 
+  updateMovieFilter = (q) => {
+    if (q.length > 0) {
+      this.setState({
+        filteredMovies: this.state.allMovies.filter((movie) =>
+          movie.title.toUpperCase().includes(q.toUpperCase())
+        ),
+      });
+    } else {
+      this.setState({ filteredMovies: this.state.allMovies });
+    }
+  };
+
   render() {
     return (
       <main className="App">
@@ -39,7 +51,7 @@ class App extends Component {
             render={() => {
               return (
                 <div>
-                  <Header />
+                  <Header onUpdateSearch={this.updateMovieFilter} />
                   <Library allMovies={this.state.filteredMovies} />
                 </div>
               );
