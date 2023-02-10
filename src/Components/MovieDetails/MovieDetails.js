@@ -78,7 +78,7 @@ class MovieDetails extends Component {
             </section>
           </NavLink>
           <section className="movie-title-container">
-            <h1>{title}</h1>
+            <h1 className="movie-title">{title}</h1>
           </section>
           <section className="middle-container">
             <section className="movie-trailer">
@@ -87,10 +87,9 @@ class MovieDetails extends Component {
                   src={`https://www.youtube.com/embed/${trailerURL}`}
                   allow="autoplay; encrypted-media"
                   allowFullScreen
-                  background-color
                   title="video"
-                  width={1600}
-                  height={800}
+                  width={1400}
+                  height={750}
                   frameBorder="0"
                 ></iframe>
               ) : (
