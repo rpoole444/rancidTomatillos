@@ -74,6 +74,7 @@ p {
 }
 
 .movie-overview {
+  position: relative;
   font-size: 30px;
   display: flex;
   width: 100vw;
@@ -84,6 +85,7 @@ p {
 }
 
 .overview {
+  position: relative;
   text-align: center;
   display: flex;
   height: 10vh;
