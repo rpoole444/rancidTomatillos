@@ -57,21 +57,48 @@ class MovieDetails extends Component {
   };
 
   render() {
-    if (!this.state.singleMovie.title) {
-      return <h1>No Video Found</h1>; //make a back button, work on error handeling, spinners for loading (grab package)
+    if (!this.state.singleMovie.title && !this.state.loading) {
+      return (
+        <section
+          style={{
+            height: "100vh",
+            width: "100vw",
+            fontsSize: "40px",
+            color: "snow",
+            backgroundColor: "black",
+          }}
+        >
+          <h1>No Video Found</h1>
+        </section>
+      );
+    } else if (this.state.loading) {
+      return (
+        <div
+          style={{
+            height: "100vh",
+            width: "100vw",
+            fontsSize: "40px",
+            color: "snow",
+            backgroundColor: "black",
+          }}
+        >
+          Loading
+        </div>
+      );
     } else {
-      const { title, tagline, overview, release_date, runtime } =
+      const { title, tagline, overview, release_date, runtime, backdrop_path } =
         this.state.singleMovie;
       const trailerURL = this.grabMovieTrailer();
       return (
-        <section className="one-movie"
+        <section
+          className="one-movie"
           style={{
-            backgroundImage: `linear-gradient(to bottom, #0000, #232325), url(${this.state.singleMovie.backdrop_path})`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
+            backgroundImage: `linear-gradient(to bottom, #0000, #232325), url(${backdrop_path})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           }}
-          >
+        >
           <NavLink to="/">
             <section className="button-container">
               <button className="home-button">Back To Home</button>
@@ -97,10 +124,10 @@ class MovieDetails extends Component {
                 <div>No trailer available</div>
               )}
             </section>
-            </section>
-            <section className="movie-details">
-              <section className="details-container">
-                <section className="details-box">
+          </section>
+          <section className="movie-details">
+            <section className="details-container">
+              <section className="details-box">
                 <p>{`Film Runtime: ${runtime} Minutes`}</p>
                 <p>{`Release Date: ${release_date}`}</p>
                 <p>{`Film Budget: $${Number(
@@ -109,13 +136,13 @@ class MovieDetails extends Component {
                 <p>{`Film Revenue: $${Number(
                   this.state.singleMovie.revenue
                 ).toLocaleString()}`}</p>
-                </section>
               </section>
-                <section className="movie-overview">
-                <p className="overview">{overview}</p>  
-                </section>
+            </section>
+            <section className="movie-overview">
+              <p className="overview">{overview}</p>
             </section>
           </section>
+        </section>
       );
     }
   }
