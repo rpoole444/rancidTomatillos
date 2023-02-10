@@ -64,20 +64,22 @@ class MovieDetails extends Component {
         this.state.singleMovie;
       const trailerURL = this.grabMovieTrailer();
       return (
-        <section
-          className="one-movie"
+        <section className="one-movie"
           style={{
-            backgroundImage: `linear-gradient(to bottom, #0000, #777), url(${this.state.singleMovie.backdrop_path})`,
+            backgroundImage: `linear-gradient(to bottom, #0000, #232325), url(${this.state.singleMovie.backdrop_path})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
           }}
-        >
+          >
           <NavLink to="/">
             <section className="button-container">
               <button className="home-button">Back To Home</button>
             </section>
           </NavLink>
-          {/* <section className="movie-title-container">
+          <section className="movie-title-container">
             <h1>{title}</h1>
-          </section> */}
+          </section>
           <section className="middle-container">
             <section className="movie-trailer">
               {trailerURL ? (
@@ -85,9 +87,11 @@ class MovieDetails extends Component {
                   src={`https://www.youtube.com/embed/${trailerURL}`}
                   allow="autoplay; encrypted-media"
                   allowFullScreen
+                  background-color
                   title="video"
                   width={1600}
                   height={800}
+                  frameBorder="0"
                 ></iframe>
               ) : (
                 <div>No trailer available</div>
@@ -96,6 +100,8 @@ class MovieDetails extends Component {
             </section>
             <section className="movie-details">
               <section className="details-container">
+                <section className="details-box">
+                <p>{`Film Runtime: ${runtime} Minutes`}</p>
                 <p>{`Release Date: ${release_date}`}</p>
                 <p>{`Film Budget: $${Number(
                   this.state.singleMovie.budget
@@ -103,11 +109,10 @@ class MovieDetails extends Component {
                 <p>{`Film Revenue: $${Number(
                   this.state.singleMovie.revenue
                 ).toLocaleString()}`}</p>
-                <p>{`Film Runtime: ${runtime} Minutes`}</p>
+                </section>
               </section>
                 <section className="movie-overview">
-                <p>{tagline}</p>
-                <p>{overview}</p>  
+                <p className="overview">{overview}</p>  
                 </section>
             </section>
           </section>
