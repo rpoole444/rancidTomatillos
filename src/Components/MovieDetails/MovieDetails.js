@@ -86,8 +86,16 @@ class MovieDetails extends Component {
         </div>
       );
     } else {
-      const { title, tagline, overview, release_date, runtime, backdrop_path } =
-        this.state.singleMovie;
+      const {
+        title,
+        tagline,
+        overview,
+        release_date,
+        runtime,
+        backdrop_path,
+        budget,
+        revenue,
+      } = this.state.singleMovie;
       const trailerURL = this.grabMovieTrailer();
       return (
         <section
@@ -130,12 +138,8 @@ class MovieDetails extends Component {
               <section className="details-box">
                 <p>{`Film Runtime: ${runtime} Minutes`}</p>
                 <p>{`Release Date: ${release_date}`}</p>
-                <p>{`Film Budget: $${Number(
-                  this.state.singleMovie.budget
-                ).toLocaleString()}`}</p>
-                <p>{`Film Revenue: $${Number(
-                  this.state.singleMovie.revenue
-                ).toLocaleString()}`}</p>
+                <p>{`Film Budget: $${Number(budget).toLocaleString()}`}</p>
+                <p>{`Film Revenue: $${Number(revenue).toLocaleString()}`}</p>
               </section>
             </section>
             <section className="movie-overview">
