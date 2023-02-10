@@ -6,6 +6,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import { Route, Switch } from "react-router-dom";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import "./App.css";
+
 class App extends Component {
   constructor() {
     super();
@@ -42,7 +43,26 @@ class App extends Component {
   };
 
   render() {
-    return (
+    const page = this.state.loading ? (
+      <div
+        style={{
+          padding: "1px",
+          height: "100vh",
+          width: "100vw",
+          backgroundColor: "black",
+        }}
+      >
+        <h3
+          style={{
+            fontSize: "40px",
+            color: "snow",
+            padding: "5vh",
+          }}
+        >
+          Loading...
+        </h3>
+      </div>
+    ) : (
       <main className="App">
         <Switch>
           <Route
@@ -70,6 +90,7 @@ class App extends Component {
         </Switch>
       </main>
     );
+    return <div>{page}</div>;
   }
 }
 export default App;
