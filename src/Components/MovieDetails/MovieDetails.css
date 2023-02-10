@@ -1,76 +1,110 @@
+html, body {
+  margin:0;
+  height:100%;
+}
+
 p {
   margin: 8px;
 }
 
-.movie-overview {
-  text-align: left;
-  display: inline-block;
+.one-movie {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  position: relative;
 }
 
 .movie-title-container {
   display: flex;
   width: 100vw;
-  height: 20vh;
+  height: 5vh;
   padding-bottom: 20px;
   justify-content: center;
   align-items: flex-end;
 }
 
+.button-container {
+  height: 15vh;
+}
+
+.home-button {
+  border-radius: 5px;
+  color: black;
+  font-size: 28px;
+  background-color: rgb(254, 254, 254);
+  margin-left: 35px;
+  border: 0;
+  margin: 15px;
+  padding: 10px;
+  font-family: 'Teko', sans-serif;;
+}
+
+.middle-container {
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .movie-trailer {
   display: flex;
-  height: 90vh;
+  height: 54vh;
   width: 69vw;
   justify-content: center;
 }
 
 .movie-details {
+  color: white;
   display: flex;
-  width: 55vw;
-  height: 100vh;
+  width: 100vw;
+  height: 40vh;
   flex-direction: column;
-  align-items: flex-start;
-  padding-right: 75px;
   font-size: 25px;
 }
 
 .details-container {
-  color: white;
-  height: auto;
-  width: auto;
-  background-color: rgba(0, 0, 0, 0.45);
-}
-
-.middle-container {
   display: flex;
+  padding-top: 10px;
+  font-size: 30px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 5vh;
 }
 
-.home-button {
-  border-radius: 5px;
-  background-color: rgb(141, 156, 133);
-  margin-left: 35px;
-}
-
-.background-image {
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.75;
-}
-
-.one-movie {
+.movie-overview {
   position: relative;
+  font-size: 30px;
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+  flex-direction: column;
+  padding-left: 30px;
+  align-items: center;
 }
 
-/* .one-movie:before {
-  content: "";
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.1;
-} */
+.overview {
+  position: relative;
+  text-align: center;
+  display: flex;
+  height: 10vh;
+  width: 50vw;
+}
+
+.details-box {
+  display: flex;
+  padding-top: 10px;
+  font-size: 30px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 88vw;
+  height: 5vh;
+}
+
+
+
+
+
+
+

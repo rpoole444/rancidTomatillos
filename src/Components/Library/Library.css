@@ -3,7 +3,8 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 15px;
-  justify-items: center;
+  justify-items: space-evenly;
+  align-items: center;
   place-items: center;
   margin-left: 40px;
 }
