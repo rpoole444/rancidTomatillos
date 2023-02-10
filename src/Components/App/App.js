@@ -42,7 +42,19 @@ class App extends Component {
   };
 
   render() {
-    return (
+    const page = this.state.loading ? (
+      <div
+        style={{
+          height: "100vh",
+          width: "100vw",
+          fontsSize: "40px",
+          color: "snow",
+          backgroundColor: "black",
+        }}
+      >
+        Loading
+      </div>
+    ) : (
       <main className="App">
         <Switch>
           <Route
@@ -70,6 +82,7 @@ class App extends Component {
         </Switch>
       </main>
     );
+    return <div>{page}</div>;
   }
 }
 export default App;
