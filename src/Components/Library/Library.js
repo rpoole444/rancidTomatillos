@@ -3,7 +3,7 @@ import Movies from "../Movies/Movies";
 import "./Library.css";
 
 const Library = ({ allMovies }) => {
-  console.log(allMovies)
+  console.log(allMovies);
   const mappedMovies =
     allMovies.length > 0 ? (
       allMovies.map((movie) => {
@@ -18,7 +18,7 @@ const Library = ({ allMovies }) => {
         );
       })
     ) : (
-      <div style={{ color: "white" }}>No Movies matched your search</div> // in the inspect tools.
+      <div className="no-movies">No Movies matched your search</div> // in the inspect tools.
     );
   return <div className="movie-container">{mappedMovies}</div>;
 };
