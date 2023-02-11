@@ -35,7 +35,7 @@ p {
 
 .movie-title {
   text-align: center;
-  width: 40vh;
+  width: 75vh;
   color: snow;
   letter-spacing: 7px;
   font-size: 47px;
@@ -43,7 +43,7 @@ p {
   margin: 0;
 }
 
-.button-55 {
+.button {
   align-self: center;
   background-color: #fff;
   background-image: none;
@@ -74,12 +74,12 @@ p {
   touch-action: manipulation;
   }
   
-.button-55:hover {
+.button:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
   }
   
-.button-55:focus {
+.button:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
   }
   
@@ -115,7 +115,7 @@ p {
 
 .details-container {
   display: flex;
-  padding-top: 20px;
+  padding-top: 48px;
   font-size: 25px;
   flex-direction: row;
   justify-content: space-evenly;
