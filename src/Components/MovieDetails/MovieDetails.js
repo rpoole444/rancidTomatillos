@@ -109,7 +109,7 @@ class MovieDetails extends Component {
         >
           <NavLink to="/">
             <section className="button-container">
-              <button class="button-55" role="button">Back to Home</button>
+              <button class="button" role="button">Back to Home</button>
             </section>
           </NavLink>
           <section className="movie-title-container">
@@ -120,7 +120,7 @@ class MovieDetails extends Component {
               {trailerURL ? (
                 <iframe
                   src={`https://www.youtube.com/embed/${trailerURL}`}
-                  allow="autoplay; encrypted-media"
+                  // allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="video"
                   width="85%"
