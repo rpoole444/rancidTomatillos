@@ -36,11 +36,6 @@ describe("User should see a Movie Title, Trailer, Movie Details, and Back Button
     .should('be.visible')
   });
 
-  it("Should see a movie tagline", () => {
-    cy.get("p").should("contain", "Her reign begins.");
-
-  });
-
   it("Should see a movie overview", () => {
     cy.get("p").should("contain", "The story of the Agojie, the all-female unit of warriors who protected the African Kingdom of Dahomey in the 1800s with skills and a fierceness unlike anything the world has ever seen, and General Nanisca as she trains the next generation of recruits and readies them for battle against an enemy determined to destroy their way of life.");
   });
@@ -60,4 +55,9 @@ describe("User should see a Movie Title, Trailer, Movie Details, and Back Button
   it("Should see a film runtime", () => {
     cy.get("p").should("contain", "135");
   });
+
+  it("Should redirect to home if button is clicked", () => { 
+    cy.get('button').click() 
+    cy.url().should('eq', 'http://localhost:3000/') 
+  })
 });

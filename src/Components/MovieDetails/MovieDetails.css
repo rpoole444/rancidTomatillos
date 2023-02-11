@@ -13,54 +13,94 @@ p {
   width: 100vw;
   flex-direction: column;
   position: relative;
+  overflow-y: scroll;
+}
+
+.trailer-error {
+  height: 10vh;
+  width: 25vw;
+  color: snow;
+  font-size: 56px;
 }
 
 .movie-title-container {
   display: flex;
   width: 100vw;
-  height: 5vh;
-  /* padding-bottom: 10px; */
+  height: 9vh;
+  padding-bottom: 10px;
   justify-content: center;
   align-items: flex-end;
   margin: 0;
 }
 
 .movie-title {
-  width: 40vh;
+  text-align: center;
+  width: 75vh;
   color: snow;
   letter-spacing: 7px;
-  font-size: 60px;
+  font-size: 47px;
   padding: 1vh;
   margin: 0;
 }
 
-.home-button {
-  border-radius: 5px;
-  color: black;
-  font-size: 28px;
-  background-color: rgb(254, 254, 254);
-  margin-left: 35px;
-  border: 0;
-  margin: 51px;
-  padding: 1vh;
+.button {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
   font-family: 'Teko', sans-serif;
-}
-
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+  
+.button:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+  }
+  
+.button:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+  
 .button-container {
-  height: 10vh;
+  padding-left: 25px;
+  padding-top: 25px;
+  height: 8vh;
 }
 
 .middle-container {
-  height: 60vh;
+  height: 45vh;
   width: 100vw;
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .movie-trailer {
   display: flex;
-  height: 54vh;
-  width: 69vw;
+  height: 55vh;
+  width: 71vw;
   justify-content: center;
 }
 
@@ -68,23 +108,24 @@ p {
   color: white;
   display: flex;
   width: 100vw;
-  height: 40vh;
+  height: 30vh;
   flex-direction: column;
   font-size: 25px;
 }
 
 .details-container {
   display: flex;
-  padding-top: 10px;
-  font-size: 30px;
+  padding-top: 48px;
+  font-size: 25px;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100vw;
   max-height: 5vh;
+  padding-bottom: 18px;
 }
 
 .movie-overview {
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
   width: 100vw;
   max-height: 25vh;
@@ -102,7 +143,6 @@ p {
 
 .details-box {
   display: flex;
-  /* padding-top: 10px; */
   font-size: 30px;
   flex-direction: row;
   justify-content: space-evenly;

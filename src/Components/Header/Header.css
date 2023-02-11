@@ -8,17 +8,16 @@ input {
   font-size: 21px;
 }
 
-h1 {
+.header-title {
   color: snow;
   letter-spacing: 7px;
-  font-size: 60px;
+  font-size: 50px;
   padding: 15px;
 }
 
 .logo-image {
-  padding: 15px;
-  height: 20vh;
-  width: 30vh;
+  height: 17vh;
+  width: 25vh;
 }
 
 .header-bar {
@@ -26,8 +25,10 @@ h1 {
   align-content: center;
   align-items: center;
   justify-content: space-between;
-  padding-right: 95px;
-  padding-left: 30px;
+  padding-right: 73px;
+  padding-left: 75px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .title-logo {

@@ -3,6 +3,7 @@ import Movies from "../Movies/Movies";
 import "./Library.css";
 
 const Library = ({ allMovies }) => {
+  console.log(allMovies)
   const mappedMovies =
     allMovies.length > 0 ? (
       allMovies.map((movie) => {

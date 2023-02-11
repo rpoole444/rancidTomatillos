@@ -1,16 +1,24 @@
 .poster-image {
   transform: scale(1.1);
-  box-shadow: 0px 6px 14px 2px rgba(253, 252, 252, 0.25); 
+  box-shadow: 0px 3px 10px 2px rgba(253, 252, 252, 0.25); 
   width: 11vw;
   height: 27vh;
-  border-radius: 9px;
+  border-radius: 2px;
 }
 
-h2 {
+.poster-image:hover {
+  cursor: pointer;
+}
+
+h3 {
   color: snow;
+  text-align: center;
   font-size: 20px;
   padding-top: 25px;
  
+}
+.poster-container {
+  text-decoration: none;
 }
 
 .movie-poster-container {
@@ -20,7 +28,7 @@ h2 {
   height: 34vh;
 }
 
-.movie-title {
+.movie-title-library {
   color: azure;
   display: flex;
   width: 12vw;

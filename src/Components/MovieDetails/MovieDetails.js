@@ -57,7 +57,7 @@ class MovieDetails extends Component {
   };
 
   render() {
-    if (!this.state.singleMovie.title && !this.state.loading) {
+    if (!this.state.singleMovie.title) {
       return (
         <section
           style={{
@@ -109,7 +109,7 @@ class MovieDetails extends Component {
         >
           <NavLink to="/">
             <section className="button-container">
-              <button className="home-button">Back To Home</button>
+              <button class="button" role="button">Back to Home</button>
             </section>
           </NavLink>
           <section className="movie-title-container">
@@ -120,15 +120,15 @@ class MovieDetails extends Component {
               {trailerURL ? (
                 <iframe
                   src={`https://www.youtube.com/embed/${trailerURL}`}
-                  allow="autoplay; encrypted-media"
+                  // allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="video"
-                  width={1400}
-                  height={750}
+                  width="85%"
+                  height="90%"
                   frameBorder="0"
                 ></iframe>
               ) : (
-                <div>No trailer available</div>
+                <div className="trailer-error">No trailer available</div>
               )}
             </section>
           </section>
