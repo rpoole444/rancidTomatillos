@@ -13,8 +13,8 @@ const Movies = ({ id, poster_path, title, average_rating }) => {
         />
         <section className="movie-title-library">
           <h3>{title}</h3>
-          <img className="star-image" src="star.png" alt="star logo" />
-          <h3>{`${average_rating.toFixed(0)}`}</h3>
+          {/* <img className="star-image" src="star.png" alt="star logo" />
+          <h3>{`${average_rating.toFixed(0)}`}</h3> */}
         </section>
       </section>
     </NavLink>
