@@ -27,6 +27,10 @@ describe("User should see a Movie Title, Trailer, Movie Details, and Back Button
     cy.visit("http://localhost:3000/724495");
   });
 
+  it("Should connect to the error page", () => {
+
+  })
+
   it("Should See a Movie title", () => {
     cy.get("h1").should("contain", "The Woman King");
   });
@@ -34,11 +38,6 @@ describe("User should see a Movie Title, Trailer, Movie Details, and Back Button
   it("Should See a Movie Trailer", () => {
     cy.get('iframe')
     .should('be.visible')
-  });
-
-  it("Should see a movie tagline", () => {
-    cy.get("p").should("contain", "Her reign begins.");
-
   });
 
   it("Should see a movie overview", () => {
@@ -60,4 +59,9 @@ describe("User should see a Movie Title, Trailer, Movie Details, and Back Button
   it("Should see a film runtime", () => {
     cy.get("p").should("contain", "135");
   });
+
+  it("Should redirect to home if button is clicked", () => { 
+    cy.get('').click() 
+    cy.url().should('eq', 'http://localhost:3000/') 
+  })
 });
