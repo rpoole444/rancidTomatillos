@@ -6,6 +6,10 @@
   border-radius: 9px;
 }
 
+.poster-image:hover {
+  cursor: pointer;
+}
+
 h3 {
   color: snow;
   font-size: 20px;
