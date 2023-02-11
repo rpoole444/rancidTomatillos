@@ -27,10 +27,6 @@ describe("User should see a Movie Title, Trailer, Movie Details, and Back Button
     cy.visit("http://localhost:3000/724495");
   });
 
-  it("Should connect to the error page", () => {
-
-  })
-
   it("Should See a Movie title", () => {
     cy.get("h1").should("contain", "The Woman King");
   });
@@ -61,7 +57,7 @@ describe("User should see a Movie Title, Trailer, Movie Details, and Back Button
   });
 
   it("Should redirect to home if button is clicked", () => { 
-    cy.get('').click() 
+    cy.get('button').click() 
     cy.url().should('eq', 'http://localhost:3000/') 
   })
 });

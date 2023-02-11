@@ -103,7 +103,7 @@ class MovieDetails extends Component {
               {trailerURL ? (
                 <iframe
                   src={`https://www.youtube.com/embed/${trailerURL}`}
-                  allow="autoplay; encrypted-media"
+                  // allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="video"
                   width="85%"

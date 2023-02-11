@@ -36,7 +36,7 @@ p {
 
 .movie-title {
   text-align: center;
-  width: 40vh;
+  width: 75vh;
   color: snow;
   letter-spacing: 7px;
   font-size: 47px;
@@ -119,7 +119,7 @@ p {
 
 .details-container {
   display: flex;
-  padding-top: 20px;
+  padding-top: 48px;
   font-size: 25px;
   flex-direction: row;
   justify-content: space-evenly;
