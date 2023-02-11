@@ -10,14 +10,24 @@ describe("A user should see a Logo, Title, and SearchBar in the Header", () => {
   });
 
   it("Should display a title", () => {
-    cy.get(".title-logo").contains("Rancid Tomatillos");
+    cy.get(".title-logo").contains("TINSELTOWN TRIBUNE");
   });
 
   it("Should display a logo", () => {
-    cy.get(".logo-image").should("be.visible");
+    cy.get('[src="filmLogo.png"]').should("be.visible");
   });
 
   it("Should display a search bar", () => {
-    cy.get("input").should("be.visible");
+    cy.get('input').should("be.visible");
   });
+
+  // it("Should filter movies on search", () => {
+  //   cy.get().should("");
+  // });
+
+  // it("Should display no movies found, if no movies are found", () => {
+  //   cy.get('').should("");
+  // });
+
+
 });
