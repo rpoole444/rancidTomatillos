@@ -13,15 +13,16 @@ p {
   width: 100vw;
   flex-direction: column;
   position: relative;
+  overflow-y: scroll;
 }
 
 .movie-title-container {
   display: flex;
   width: 100vw;
-  height: 5vh;
-  /* padding-bottom: 10px; */
+  height: 9vh;
+  padding-bottom: 10px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   margin: 0;
 }
 
@@ -29,7 +30,7 @@ p {
   width: 40vh;
   color: snow;
   letter-spacing: 7px;
-  font-size: 60px;
+  font-size: 47px;
   padding: 1vh;
   margin: 0;
 }
@@ -37,29 +38,30 @@ p {
 .home-button {
   border-radius: 5px;
   color: black;
-  font-size: 28px;
-  background-color: rgb(254, 254, 254);
+  font-size: 19px;
+  background-color: snow;
   margin-left: 35px;
   border: 0;
-  margin: 51px;
+  margin: 32px;
   padding: 1vh;
   font-family: 'Teko', sans-serif;
 }
 
 .button-container {
-  height: 10vh;
+  height: 8vh;
 }
 
 .middle-container {
-  height: 60vh;
+  height: 45vh;
   width: 100vw;
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .movie-trailer {
   display: flex;
-  height: 54vh;
+  height: 60vh;
   width: 69vw;
   justify-content: center;
 }
@@ -68,7 +70,7 @@ p {
   color: white;
   display: flex;
   width: 100vw;
-  height: 40vh;
+  height: 30vh;
   flex-direction: column;
   font-size: 25px;
 }
@@ -76,15 +78,16 @@ p {
 .details-container {
   display: flex;
   padding-top: 10px;
-  font-size: 30px;
+  font-size: 25px;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100vw;
   max-height: 5vh;
+  padding-bottom: 18px;
 }
 
 .movie-overview {
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
   width: 100vw;
   max-height: 25vh;

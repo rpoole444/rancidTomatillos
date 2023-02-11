@@ -57,7 +57,7 @@ class MovieDetails extends Component {
   };
 
   render() {
-    if (!this.state.singleMovie.title && !this.state.loading) {
+    if (!this.state.singleMovie.title) {
       return (
         <section
           style={{
@@ -123,8 +123,8 @@ class MovieDetails extends Component {
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="video"
-                  width={1400}
-                  height={750}
+                  width="80%"
+                  height="80%"
                   frameBorder="0"
                 ></iframe>
               ) : (

@@ -6,7 +6,7 @@
   border-radius: 9px;
 }
 
-h2 {
+h3 {
   color: snow;
   font-size: 20px;
   padding-top: 25px;
@@ -20,7 +20,7 @@ h2 {
   height: 34vh;
 }
 
-.movie-title {
+.movie-title-library {
   color: azure;
   display: flex;
   width: 12vw;
