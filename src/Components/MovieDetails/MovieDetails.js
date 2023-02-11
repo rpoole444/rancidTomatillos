@@ -109,7 +109,7 @@ class MovieDetails extends Component {
         >
           <NavLink to="/">
             <section className="button-container">
-              <button className="home-button">Back To Home</button>
+              <button class="button-55" role="button">Back to Home</button>
             </section>
           </NavLink>
           <section className="movie-title-container">
@@ -123,8 +123,8 @@ class MovieDetails extends Component {
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="video"
-                  width="80%"
-                  height="80%"
+                  width="90%"
+                  height="85%"
                   frameBorder="0"
                 ></iframe>
               ) : (
