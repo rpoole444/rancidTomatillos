@@ -1,6 +1,7 @@
-html, body {
-  margin:0;
-  height:100%;
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
 
 p {
@@ -43,7 +44,8 @@ p {
   margin: 0;
 }
 
-.button-55 {
+.home-button,
+.button {
   align-self: center;
   background-color: #fff;
   background-image: none;
@@ -53,16 +55,16 @@ p {
   border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
   color: #41403e;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   font-size: 1rem;
   line-height: 23px;
   outline: none;
-  padding: .75rem;
+  padding: 0.75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
   border-bottom-left-radius: 15px 255px;
@@ -72,17 +74,19 @@ p {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  }
-  
-.button-55:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+}
+
+.home-button:hover,
+.button:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
-  }
-  
-.button-55:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-  }
-  
+}
+
+.home-button:hover,
+.button:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
 .button-container {
   padding-left: 25px;
   padding-top: 25px;
@@ -150,9 +154,23 @@ p {
   height: 5vh;
 }
 
+.no-video-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-size: 40px;
+  padding: 20px;
+  color: snow;
+  background-color: black;
+}
 
-
-
-
-
-
+.loading {
+  height: 100vh;
+  width: 100vw;
+  font-size: 40px;
+  color: snow;
+  background-color: black;
+}

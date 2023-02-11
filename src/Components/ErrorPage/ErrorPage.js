@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div>
+    <div className="error-page">
       <h1>404 Error</h1>
-      <img src="robot.jpg" alt="robot" />
+      <img src="robot.png" alt="robot" />
       <h2>Page Not Found</h2>
-      <Link to="/">Go Home</Link>
+      <Link className="link" to="/">
+        Go Home
+      </Link>
     </div>
   );
 };
