@@ -123,12 +123,12 @@ class MovieDetails extends Component {
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="video"
-                  width="90%"
-                  height="85%"
+                  width="85%"
+                  height="90%"
                   frameBorder="0"
                 ></iframe>
               ) : (
-                <div>No trailer available</div>
+                <div className="trailer-error">No trailer available</div>
               )}
             </section>
           </section>

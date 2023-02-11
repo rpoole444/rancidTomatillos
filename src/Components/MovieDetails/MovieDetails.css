@@ -16,6 +16,13 @@ p {
   overflow-y: scroll;
 }
 
+.trailer-error {
+  height: 10vh;
+  width: 25vw;
+  color: snow;
+  font-size: 56px;
+}
+
 .movie-title-container {
   display: flex;
   width: 100vw;
@@ -27,6 +34,7 @@ p {
 }
 
 .movie-title {
+  text-align: center;
   width: 40vh;
   color: snow;
   letter-spacing: 7px;
