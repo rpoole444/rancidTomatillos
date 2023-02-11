@@ -4,7 +4,7 @@
   padding-left: 37px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 15px;
+  grid-gap: 27px;
   justify-items: space-evenly;
   align-items: center;
   place-items: center;
