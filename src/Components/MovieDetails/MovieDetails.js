@@ -64,12 +64,15 @@ class MovieDetails extends Component {
           <Link to="/">Go Home</Link>
         </section>
       );
-    } else if (this.state.loading) {
-      return <div className="loading">Loading</div>;
-    } else {
+    } else if (this.state.loading && !this.state.singleMovie) {
+      return (
+        <div className="loading-page">
+          <h3 className="loading-text">Loading...</h3>
+        </div>
+      );
+    } else if (this.state.singleMovie && !this.state.loading) {
       const {
         title,
-        tagline,
         overview,
         release_date,
         runtime,
@@ -90,9 +93,7 @@ class MovieDetails extends Component {
         >
           <NavLink to="/">
             <section className="button-container">
-              <button className="button" role="button">
-                Back to Home
-              </button>
+              <button className="button">Back to Home</button>
             </section>
           </NavLink>
           <section className="movie-title-container">
