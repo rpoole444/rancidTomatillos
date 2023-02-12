@@ -1,8 +1,9 @@
 import React from "react";
 import "./Movies.css";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types'
 
-const Movies = ({ id, poster_path, title, average_rating }) => {
+const Movies = ({ id, poster_path, title }) => {
   return (
     <NavLink to={`/${id}`} key={id} className="poster-container">
       <section className="movie-poster-container">
@@ -22,3 +23,9 @@ const Movies = ({ id, poster_path, title, average_rating }) => {
 };
 
 export default Movies;
+
+Movies.propTypes = {
+  id: PropTypes.number,
+  poster_path: PropTypes.string,
+  title: PropTypes.string
+}
