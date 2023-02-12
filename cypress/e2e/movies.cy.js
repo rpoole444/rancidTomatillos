@@ -1,4 +1,4 @@
-describe("User should see a Movie Image, Title, and Rating for each movie in the library", () => {
+describe("User should see a Movie Image and Title for each movie in the library", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
   });
@@ -13,5 +13,5 @@ describe("User should see a Movie Image, Title, and Rating for each movie in the
 
   it("Should See a Movie title", () => {
     cy.get("h3").should("be.visible");
-  });  
+  });
 });
