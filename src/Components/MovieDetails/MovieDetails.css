@@ -167,10 +167,15 @@ p {
   background-color: black;
 }
 
-.loading {
+.loading-page {
+  padding: 1px;
   height: 100vh;
   width: 100vw;
+  background-color: black;
+}
+
+.loading-text {
   font-size: 40px;
   color: snow;
-  background-color: black;
+  padding: 5vh;
 }
