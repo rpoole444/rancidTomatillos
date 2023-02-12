@@ -44,23 +44,8 @@ class App extends Component {
 
   render() {
     const page = this.state.loading ? (
-      <div
-        style={{
-          padding: "1px",
-          height: "100vh",
-          width: "100vw",
-          backgroundColor: "black",
-        }}
-      >
-        <h3
-          style={{
-            fontSize: "40px",
-            color: "snow",
-            padding: "5vh",
-          }}
-        >
-          Loading...
-        </h3>
+      <div className="loading-page">
+        <h3 className="loading-text">Loading...</h3>
       </div>
     ) : (
       <main className="App">
@@ -69,7 +54,11 @@ class App extends Component {
             exact
             path="/"
             render={() => {
-              return (
+              return this.state.loading ? (
+                <div className="loading-page">
+                  <h3 className="loading-text">Loading...</h3>
+                </div>
+              ) : (
                 <div>
                   <Header onUpdateSearch={this.updateMovieFilter} />
                   <Library allMovies={this.state.filteredMovies} />
@@ -81,7 +70,15 @@ class App extends Component {
             exact
             path="/:movieId"
             render={({ match }) => {
-              return <MovieDetails movieID={match.params.movieId} />;
+              return this.state.loading ? (
+                <div className="loading-page">
+                  <h3 className="loading-text">Loading...</h3>
+                </div>
+              ) : (
+                <div>
+                  <MovieDetails movieID={match.params.movieId} />;
+                </div>
+              );
             }}
           ></Route>
           <Route path="*">
