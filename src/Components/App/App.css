@@ -7,10 +7,7 @@
   pointer-events: none;
 }
 
-
- 
-@media (min-width: 1025px) and (max-width: 1280px) { 
-
+@media (min-width: 1025px) and (max-width: 1280px) {
 }
 
 .App-header {
@@ -35,4 +32,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.loading-page {
+  padding: 1px;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.loading-text {
+  font-size: 40px;
+  color: snow;
+  padding: 5vh;
 }
