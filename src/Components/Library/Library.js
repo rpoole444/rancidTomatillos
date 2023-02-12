@@ -18,7 +18,7 @@ const Library = ({ allMovies }) => {
         );
       })
     ) : (
-      <div className="no-movies">No Movies matched your search</div> // in the inspect tools.
+      <div className="no-movies">No Movies Matched Your Search</div> // in the inspect tools.
     );
   return <div className="movie-container">{mappedMovies}</div>;
 };
