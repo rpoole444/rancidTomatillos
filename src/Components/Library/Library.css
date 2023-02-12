@@ -9,4 +9,12 @@
   align-items: center;
   place-items: center;
   margin-left: 65px;
+  background-color: black;
+}
+
+.no-movies {
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
 }

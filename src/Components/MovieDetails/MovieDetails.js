@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./MovieDetails.css";
 class MovieDetails extends Component {
   constructor() {
@@ -59,36 +59,20 @@ class MovieDetails extends Component {
   render() {
     if (!this.state.singleMovie.title) {
       return (
-        <section
-          style={{
-            height: "100vh",
-            width: "100vw",
-            fontsSize: "40px",
-            color: "snow",
-            backgroundColor: "black",
-          }}
-        >
+        <section className="no-video-found">
           <h1>No Video Found</h1>
+          <Link to="/">Go Home</Link>
         </section>
       );
-    } else if (this.state.loading) {
+    } else if (this.state.loading && !this.state.singleMovie) {
       return (
-        <div
-          style={{
-            height: "100vh",
-            width: "100vw",
-            fontsSize: "40px",
-            color: "snow",
-            backgroundColor: "black",
-          }}
-        >
-          Loading
+        <div className="loading-page">
+          <h3 className="loading-text">Loading...</h3>
         </div>
       );
-    } else {
+    } else if (this.state.singleMovie && !this.state.loading) {
       const {
         title,
-        tagline,
         overview,
         release_date,
         runtime,
@@ -109,7 +93,7 @@ class MovieDetails extends Component {
         >
           <NavLink to="/">
             <section className="button-container">
-              <button class="button" role="button">Back to Home</button>
+              <button className="button">Back to Home</button>
             </section>
           </NavLink>
           <section className="movie-title-container">
