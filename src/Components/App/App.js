@@ -5,6 +5,7 @@ import Library from "../Library/Library";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import { Route, Switch } from "react-router-dom";
 import MovieDetails from "../MovieDetails/MovieDetails";
+import PropTypes from "prop-types";
 import "./App.css";
 
 class App extends Component {
@@ -91,3 +92,7 @@ class App extends Component {
   }
 }
 export default App;
+
+App.propTypes = {
+  movieID: PropTypes.number
+}
