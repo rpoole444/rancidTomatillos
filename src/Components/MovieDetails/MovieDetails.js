@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./MovieDetails.css";
+
 class MovieDetails extends Component {
   constructor() {
     super();
@@ -135,3 +136,4 @@ class MovieDetails extends Component {
   }
 }
 export default MovieDetails;
+
