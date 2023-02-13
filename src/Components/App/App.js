@@ -104,6 +104,6 @@ class App extends Component {
 export default App;
 
 App.propTypes = {
-  movieID: PropTypes.number.isRequired,
-  updateLibrary: PropTypes.func.isRequired,
+  movieID: PropTypes.number,
+  updateLibrary: PropTypes.func,
 };

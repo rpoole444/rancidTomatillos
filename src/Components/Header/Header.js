@@ -23,5 +23,5 @@ const Header = (props) => {
 export default Header;
 
 Header.propTypes = {
-  onUpdateSearch: PropTypes.string.isRequired,
+  onUpdateSearch: PropTypes.func.isRequired,
 };
