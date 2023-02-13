@@ -105,4 +105,5 @@ export default App;
 
 App.propTypes = {
   movieID: PropTypes.number.isRequired,
+  updateLibrary: PropTypes.func.isRequired,
 };
