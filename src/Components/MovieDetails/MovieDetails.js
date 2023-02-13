@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./MovieDetails.css";
+import propTypes from "prop-types";
 
 class MovieDetails extends Component {
   constructor(props) {
@@ -136,3 +137,8 @@ class MovieDetails extends Component {
   }
 }
 export default MovieDetails;
+
+MovieDetails.propTypes = {
+  movieID: propTypes.number.isRequired,
+  updateLibrary: propTypes.func.isRequired,
+};
