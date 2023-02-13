@@ -1,7 +1,7 @@
 import React from "react";
 import "./Movies.css";
 import { NavLink } from "react-router-dom";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Movies = ({ id, poster_path, title }) => {
   return (
@@ -25,7 +25,7 @@ const Movies = ({ id, poster_path, title }) => {
 export default Movies;
 
 Movies.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   poster_path: PropTypes.string,
-  title: PropTypes.string
-}
+  title: PropTypes.string,
+};
