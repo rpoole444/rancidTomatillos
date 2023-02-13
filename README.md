@@ -73,6 +73,9 @@ This project is designed to allow users to learn more about the latest popular m
 <td><img src="https://avatars.githubusercontent.com/u/108428451?v=4" alt="Josephine Heidepriem"
  width="150" height="auto" /></td>
 
+   <tr>
+      <td> Reid Poole <a href="https://github.com/rpoole444">GH</td>
+    </tr>
  <td><img src="https://avatars.githubusercontent.com/u/111818942?v=4" alt="Reid Poole"
  width="150" height="auto" /></td>
 </table>
