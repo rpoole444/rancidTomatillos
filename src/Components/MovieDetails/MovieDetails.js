@@ -48,7 +48,7 @@ class MovieDetails extends Component {
     const trailer = this.state.trailer.find(
       (trailer) => trailer.type === "Trailer"
     );
-    console.log(trailer);
+
     if (!trailer && this.state.trailer.length > 0) {
       return this.state.trailer[0].key;
     } else if (trailer && this.state.trailer.length > 0) {
