@@ -49,6 +49,11 @@ This project is designed to allow users to learn more about the latest popular m
 - Create a multi-page UX using Router
 
 ## Preview 
+![mainPage2](https://user-images.githubusercontent.com/108428451/218535059-6071ce00-dc55-4468-8eca-ac5f00688840.gif)
+![MovieDeets](https://user-images.githubusercontent.com/108428451/218535072-8e788754-ca44-4842-ac6f-01768dcb1697.gif)
+![searchBar](https://user-images.githubusercontent.com/108428451/218535084-eacbc0a4-842d-4108-b257-5411d03ddafd.gif)
+![errorPage](https://user-images.githubusercontent.com/108428451/218535793-3b919443-6507-44eb-8de4-788caf69983a.png)
+![Screen Shot 2023-02-13 at 11 56 47 AM](https://user-images.githubusercontent.com/108428451/218536122-1b4cbb18-ffac-445e-b77e-cdeeb587b5b3.png)
 
 
 ## Wins & Challenges
