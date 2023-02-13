@@ -1,7 +1,7 @@
 import React from "react";
 import Movies from "../Movies/Movies";
 import "./Library.css";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Library = ({ allMovies }) => {
   console.log(allMovies);
@@ -27,5 +27,5 @@ const Library = ({ allMovies }) => {
 export default Library;
 
 Library.propTypes = {
-  allMovies: PropTypes.array
-}
+  allMovies: PropTypes.array.isRequired,
+};
