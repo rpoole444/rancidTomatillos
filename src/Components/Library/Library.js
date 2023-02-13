@@ -4,7 +4,6 @@ import "./Library.css";
 import PropTypes from "prop-types";
 
 const Library = ({ allMovies }) => {
-  console.log(allMovies);
   const mappedMovies =
     allMovies.length > 0 ? (
       allMovies.map((movie) => {
