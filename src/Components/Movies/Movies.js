@@ -27,5 +27,5 @@ export default Movies;
 Movies.propTypes = {
   id: PropTypes.number.isRequired,
   poster_path: PropTypes.string.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
