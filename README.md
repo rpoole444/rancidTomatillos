@@ -3,13 +3,13 @@
 If you're interested in the latest films, Ceaseless Cinema is here for you! You can search through all of the films and find their trailers and film details such as, runtime, release date, budge, revenue, description, and their official trailer. 
 
 ## Table of Contents
-  - [Installation & Setup](#setup)
+  - [Installation + Setup](#setup)
   - [Technologies](#technologies)
   - [Project Spec](#project-spec)
   - [Abstract](#abstract)
   - [Learning Goals](#learning-goals)
   - [Preview](#preview)
-  - [Wins & Challenges](#wins-and-challenges)
+  - [Wins + Challenges](#wins-and-challenges)
   - [Authors](#Authors)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
