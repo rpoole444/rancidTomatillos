@@ -3,7 +3,7 @@
 If you're interested in the latest films, Ceaseless Cinema is here for you! You can search through all of the films and find their trailers and film details such as, runtime, release date, budge, revenue, description, and their official trailer. 
 
 ## Table of Contents
-  - [Installation + Setup](#setup)
+  - [Installation + Setup](#installation-setup)
   - [Technologies](#technologies)
   - [Project Spec](#project-spec)
   - [Abstract](#abstract)
