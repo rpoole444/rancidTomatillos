@@ -3,7 +3,7 @@
 If you're interested in the latest films, Ceaseless Cinema is here for you! You can search through all of the films and find their trailers and film details such as, runtime, release date, budge, revenue, description, and their official trailer. 
 
 ## Table of Contents
-  - [Installation + Setup](#installation-setup)
+  - [Setup](#setup)
   - [Technologies](#technologies)
   - [Project Spec](#project-spec)
   - [Abstract](#abstract)
@@ -14,7 +14,7 @@ If you're interested in the latest films, Ceaseless Cinema is here for you! You 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Installation & Setup
+## Setup
 
 - Clone down this repo [here](https://github.com/rpoole444/rancidTomatillos)
 - On the command line, type: $ npm intall
