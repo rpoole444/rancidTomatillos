@@ -45,7 +45,6 @@ class MovieDetails extends Component {
   };
 
   grabMovieTrailer = () => {
-    console.log(this.state.trailer);
     const trailer = this.state.trailer.find(
       (trailer) => trailer.type === "Trailer"
     );
