@@ -43,6 +43,12 @@ class App extends Component {
     }
   };
 
+  updateLibrary = () => {
+    this.setState({
+      filteredMovies: this.state.allMovies,
+    });
+  };
+
   render() {
     const page = this.state.loading ? (
       <div className="loading-page">
@@ -77,7 +83,11 @@ class App extends Component {
                 </div>
               ) : (
                 <div>
-                  <MovieDetails movieID={match.params.movieId} />;
+                  <MovieDetails
+                    movieID={match.params.movieId}
+                    updateLibrary={this.updateLibrary}
+                  />
+                  ;
                 </div>
               );
             }}
