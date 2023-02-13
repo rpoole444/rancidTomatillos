@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Ceaseless Cinema
+
+If you're interested in the latest films, Ceaseless Cinema is here for you! You can search through all of the films and find their trailers and film details such as, runtime, release date, budge, revenue, description, and their official trailer. 
+
+## Table of Contents
+  - [Installation & Setup](#setup)
+  - [Technologies](#technologies)
+  - [Project Spec](#project-spec)
+  - [Abstract](#abstract)
+  - [Learning Goals](#learning-goals)
+  - [Preview](#preview)
+  - [Wins & Challenges](#wins-and-challenges)
+  - [Authors](#Authors)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installation & Setup
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
+- Clone down this repo [here](https://github.com/rpoole444/rancidTomatillos)
+- On the command line, type: $ npm intall
+- On the command line, type: $ npm start
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The page will reload when you make changes.\
 You may also see any lint errors in the console.
+## Technologies
+  - Javascript
+  - CSS / HTML
+  - VSCode
+  - Git Version Control / GitHub
+  - Webpack node package
+  - React 
+  - Router
+  - Google Chrome or Web Browser of User's Choice
+  - Mac OS Terminal/Command Line
+  - Cypress
+  - Node.js 
+## Project Spec
+[click here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
 
-### `npm test`
+## Abstract 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is designed to allow users to learn more about the latest popular movies. As the user visits the page, a number of movie posters are displayed. The main page also includes a search bar that allows users to find any of the films by title. A user can click on each movie poster and a new page will open with all of the film details. Once a user is on the details page, they will see an official trailer for that film, embedded from youtube. The page will also display overview, runtime, release date, budget, and revenue. When the user chooses to return home, they can click a home button on the top left of the screen. If there is an lag from the server, the app also includes loading pages in between page load, as well as error handling if the page is not found. 
 
-### `npm run build`
+## Learning Goals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Gain competency with React fundamentals
+- Learn how to test React components & asynchronous JS
+- Practice refactoring
+- Create a multi-page UX using Router
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Preview 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Wins & Challenges
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Successfully created our first app using React
+- Successfully implemented Router
+- Successfully learned how to use iframe and bring in movie trailers from youtube using the film's Id
+- Successfully implemented cypress testing to check functionality
+- Successfully implemented loading and error handling 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Using router was a learning curve, but ultimately made connecting a multi-page app much easier 
+- Learning cypress was something new for us, so getting th syntax correct took additional research. 
+- Error and loading functionality was very tricky but we were able to add properties to state to handle loading. 
+- We would have liked to use implement more page responsiveness with a media queries. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<table>
+    <tr>
+      <td> Josephine Heidepriem <a href="https://github.com/jheidepriem">GH</td>
+    </tr>
+<td><img src="https://avatars.githubusercontent.com/u/108428451?v=4" alt="Josephine Heidepriem"
+ width="150" height="auto" /></td>
 
-## Learn More
+ <td><img src="https://avatars.githubusercontent.com/u/111818942?v=4" alt="Reid Poole"
+ width="150" height="auto" /></td>
+</table>
+  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
