@@ -1,5 +1,6 @@
 import React from "react";
 import "../Header/Header.css";
+import PropTypes from "prop-types";
 
 const Header = (props) => {
   const { onUpdateSearch } = props;
@@ -20,3 +21,7 @@ const Header = (props) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  onUpdateSearch: PropTypes.string.isRequired,
+};

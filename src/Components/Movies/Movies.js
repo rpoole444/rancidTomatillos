@@ -1,8 +1,9 @@
 import React from "react";
 import "./Movies.css";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Movies = ({ id, poster_path, title, average_rating }) => {
+const Movies = ({ id, poster_path, title }) => {
   return (
     <NavLink to={`/${id}`} key={id} className="poster-container">
       <section className="movie-poster-container">
@@ -13,8 +14,6 @@ const Movies = ({ id, poster_path, title, average_rating }) => {
         />
         <section className="movie-title-library">
           <h3>{title}</h3>
-          {/* <img className="star-image" src="star.png" alt="star logo" />
-          <h3>{`${average_rating.toFixed(0)}`}</h3> */}
         </section>
       </section>
     </NavLink>
@@ -22,3 +21,9 @@ const Movies = ({ id, poster_path, title, average_rating }) => {
 };
 
 export default Movies;
+
+Movies.propTypes = {
+  id: PropTypes.number.isRequired,
+  poster_path: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};

@@ -1,9 +1,10 @@
 import { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./MovieDetails.css";
+
 class MovieDetails extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       singleMovie: {},
       trailer: [],
@@ -44,11 +45,10 @@ class MovieDetails extends Component {
   };
 
   grabMovieTrailer = () => {
-    console.log(this.state.trailer);
     const trailer = this.state.trailer.find(
       (trailer) => trailer.type === "Trailer"
     );
-    console.log(trailer);
+
     if (!trailer && this.state.trailer.length > 0) {
       return this.state.trailer[0].key;
     } else if (trailer && this.state.trailer.length > 0) {
@@ -93,7 +93,9 @@ class MovieDetails extends Component {
         >
           <NavLink to="/">
             <section className="button-container">
-              <button className="button">Back to Home</button>
+              <button className="button" onChange={this.props.updateLibrary()}>
+                Back to Home
+              </button>
             </section>
           </NavLink>
           <section className="movie-title-container">
@@ -104,7 +106,6 @@ class MovieDetails extends Component {
               {trailerURL ? (
                 <iframe
                   src={`https://www.youtube.com/embed/${trailerURL}`}
-                  // allow="autoplay; encrypted-media"
                   allowFullScreen
                   title="video"
                   width="85%"

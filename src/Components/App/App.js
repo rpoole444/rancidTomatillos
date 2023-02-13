@@ -5,6 +5,7 @@ import Library from "../Library/Library";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import { Route, Switch } from "react-router-dom";
 import MovieDetails from "../MovieDetails/MovieDetails";
+import PropTypes from "prop-types";
 import "./App.css";
 
 class App extends Component {
@@ -42,6 +43,12 @@ class App extends Component {
     }
   };
 
+  updateLibrary = () => {
+    this.setState({
+      filteredMovies: this.state.allMovies,
+    });
+  };
+
   render() {
     const page = this.state.loading ? (
       <div className="loading-page">
@@ -76,7 +83,11 @@ class App extends Component {
                 </div>
               ) : (
                 <div>
-                  <MovieDetails movieID={match.params.movieId} />;
+                  <MovieDetails
+                    movieID={match.params.movieId}
+                    updateLibrary={this.updateLibrary}
+                  />
+                  ;
                 </div>
               );
             }}
@@ -91,3 +102,8 @@ class App extends Component {
   }
 }
 export default App;
+
+App.propTypes = {
+  movieID: PropTypes.number.isRequired,
+  updateLibrary: PropTypes.func.isRequired,
+};
