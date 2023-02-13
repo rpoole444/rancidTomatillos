@@ -3,8 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 import "./MovieDetails.css";
 
 class MovieDetails extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       singleMovie: {},
       trailer: [],
@@ -93,7 +93,9 @@ class MovieDetails extends Component {
         >
           <NavLink to="/">
             <section className="button-container">
-              <button className="button">Back to Home</button>
+              <button className="button" onChange={this.props.updateLibrary()}>
+                Back to Home
+              </button>
             </section>
           </NavLink>
           <section className="movie-title-container">
