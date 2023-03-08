@@ -1,5 +1,7 @@
 # Ceaseless Cinema
 
+(Open the app)[https://ceaseless-cinema.vercel.app/]
+
 If you're interested in the latest films, Ceaseless Cinema is here for you! You can search through all of the films and find their trailers and film details such as, runtime, release date, budge, revenue, description, and their official trailer. 
 
 ## Table of Contents
